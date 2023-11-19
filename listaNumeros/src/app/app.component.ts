@@ -11,6 +11,8 @@ export class AppComponent {
   numeros: number[] = [1, 2, 3, 4, 5, 6, 7, 8,];
 
   resultadoSumatorio: number = 0;
+  resultadoMaximo: number = 0;
+  resultadoMinimo: number = 0;
 
   calcularSumatorio() {
     for (let index = 0; index < this.numeros.length; index++) {
@@ -19,13 +21,13 @@ export class AppComponent {
     }
     return this.resultadoSumatorio;
   }
-  maximo() {
-
+  encontrarMaximo() {
+    this.resultadoMaximo = Math.max(...this.numeros);
+    return this.resultadoMaximo;
   }
-  minimo() {
-
+  encontrarMinimo() {
+    this.resultadoMinimo = Math.min(...this.numeros);
+    return this.resultadoMinimo;
   }
-
-
 
 }

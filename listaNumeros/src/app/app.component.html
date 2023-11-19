@@ -13,12 +13,12 @@
 
   <div class="contenedor-botones">
     <div><button type="button" (click)="calcularSumatorio()"><span>&Sigma;</span></button></div>
-    <div><button type="button" (click)="maximo()">Max</button> </div>
-    <div><button type="button" (click)="minimo()">min</button></div>
+    <div><button type="button" (click)="encontrarMaximo()">Max</button> </div>
+    <div><button type="button" (click)="encontrarMinimo()">min</button></div>
   </div>
   <div class="contenedor-resultados">
     <div><span>&Sigma;</span>x<sub>i</sub>={{resultadoSumatorio}}</div>
-    <div>Máximo=</div>
-    <div>Minimo=</div>
+    <div>Máximo={{resultadoMaximo}}</div>
+    <div>Minimo={{resultadoMinimo}}</div>
   </div>
 </div>
