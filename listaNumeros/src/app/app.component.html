@@ -1,0 +1,18 @@
+<h1> Lista Números</h1>
+<div>
+  <div>
+    <div *ngFor="let lista of numeros">
+      {{lista}}
+    </div>
+  </div>
+  <div>
+    <div><button type="button" (click)="sumatorio()"><span>&Sigma;</span></button></div>
+    <div><button type="button" (click)="maximo()">Max</button> </div>
+    <div><button type="button" (click)="minimo()">min</button></div>
+  </div>
+  <div>
+    <div>sumatorio</div>
+    <div>maximo</div>
+    <div>minimo</div>
+  </div>
+</div>
