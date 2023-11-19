@@ -1,0 +1,41 @@
+.contenedor {
+    width: 50%;
+    border: 1px solid black;
+    margin: 40px;
+    padding: 15px;
+}
+
+.contenedor-lista {
+    border: 1px solid red;
+    margin: 40px;
+    padding: 20px;
+    width: 50%;
+    display: flex;
+    font-size: larger;
+}
+
+.contenedor-resultados {
+    display: flex;
+}
+
+.contenedor-resultados>div {
+    width: 80px;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+}
+
+.contenedor-botones {
+    display: flex;
+}
+
+.contenedor-botones>div {
+    width: 80px;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+}

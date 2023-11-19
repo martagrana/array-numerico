@@ -1,18 +1,24 @@
 <h1> Lista Números</h1>
-<div>
-  <div>
+
+<div class="contenedor">
+  <h2>Conjunto de números</h2>
+  <div class="contenedor-lista">
+
     <div *ngFor="let lista of numeros">
       {{lista}}
     </div>
   </div>
-  <div>
-    <div><button type="button" (click)="sumatorio()"><span>&Sigma;</span></button></div>
+</div>
+<div class="contenedor">
+
+  <div class="contenedor-botones">
+    <div><button type="button" (click)="calcularSumatorio()"><span>&Sigma;</span></button></div>
     <div><button type="button" (click)="maximo()">Max</button> </div>
     <div><button type="button" (click)="minimo()">min</button></div>
   </div>
-  <div>
-    <div>sumatorio</div>
-    <div>maximo</div>
-    <div>minimo</div>
+  <div class="contenedor-resultados">
+    <div><span>&Sigma;</span>x<sub>i</sub>={{resultadoSumatorio}}</div>
+    <div>Máximo=</div>
+    <div>Minimo=</div>
   </div>
 </div>
