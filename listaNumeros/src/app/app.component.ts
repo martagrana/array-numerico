@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'listaNumeros';
 
-  numeros: number[] = [1, 2, 3, 4, 5, 6, 7, 8,];
+  numeros: number[] = [];
 
   resultadoSumatorio: number = 0;
   resultadoMaximo: number = 0;
