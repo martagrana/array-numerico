@@ -7,13 +7,11 @@
     justify-content: center;
 }
 
-.contenedor-lista {
-    justify-content: center;
-    display: flex;
-    margin: 0 auto;
-    padding: 20px;
-    width: 50%;
-    font-size: larger;
+
+.lista {
+    display: inline-block;
+    margin-right: 10px;
+
 }
 
 .contenedor-resultados {

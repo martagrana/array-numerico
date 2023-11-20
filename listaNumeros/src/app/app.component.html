@@ -2,17 +2,18 @@
 
 <div class="contenedor">
   <h2>Introduce un número</h2>
-  <div class="contenedor-lista">
+  <div class="contenedor-resultados">
     <div>
-      <input type="text" [(ngModel)]="numeros">
+      <input type="number" [(ngModel)]="nuevoNumero">
     </div>
   </div>
   <div>
-    <div><button type="button" (click)="encontrarMaximo()">Añadir a la lista</button> </div>
+    <div><button type="button" (click)="agregarNumero()">Añadir a la lista</button>
+    </div>
   </div>
   <div>
     <h2>Valores actuales</h2>
-    <div>[{{numeros}}]</div>
+    <div class="lista" *ngFor="let numero of numeros">{{ numero }}</div>
   </div>
   <div class="contenedor-resultados">
     <div><span>&Sigma;</span>x<sub>i</sub>={{resultadoSumatorio}}</div>
