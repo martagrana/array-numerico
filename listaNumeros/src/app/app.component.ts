@@ -22,11 +22,12 @@ export class AppComponent {
   }
 
   calcularSumatorio() {
+    let sumatorio: number = 0;
     for (let index = 0; index < this.numeros.length; index++) {
-      /*const element = this.numeros[index];*/
-      this.resultadoSumatorio += this.numeros[index];
+
+      sumatorio += this.numeros[index];
     }
-    return this.resultadoSumatorio;
+    this.resultadoSumatorio = sumatorio;
   }
   encontrarMaximo() {
     this.resultadoMaximo = Math.max(...this.numeros);
