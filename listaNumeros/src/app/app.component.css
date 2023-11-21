@@ -1,12 +1,27 @@
 .contenedor {
     width: 50%;
     border: 1px solid black;
-    margin: 40px;
+    margin: 20px;
     padding: 15px;
     text-align: center;
     justify-content: center;
 }
 
+.box-2 {
+
+    border: 1px solid black;
+    margin: 10px;
+}
+
+
+.contenedor-veriones {
+
+    border: 1px solid black;
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+}
 
 .lista {
     display: inline-block;
