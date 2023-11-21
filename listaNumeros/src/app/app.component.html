@@ -15,63 +15,35 @@
         <div><button type="button" (click)="agregarNumero()">Añadir a la lista</button>
         </div>
       </div>
+      <h2>Introduce un tamaño de la muestra</h2>
+      <div class="contenedor-resultados">
+        <div>
+          <input type="number" [(ngModel)]="tamanoMuestra">
+        </div>
+      </div>
       <div>
-        <h2>Valores actuales</h2>
-        <div class="lista" *ngFor="let numero of numeros">{{ numero }}</div>
+        <div><button type="button" (click)="generarMuestra()">Generar muestra</button>
+        </div>
+      </div>
+      <div>
+        <h2>Muestra de números</h2>
+
+        <div class="lista" *ngFor="let numero of muestra">{{numero}}</div>
       </div>
     </div>
 
     <div class="contenedor-veriones">
       <div class="contenedor-resultados">
-        <div><span>&Sigma;</span>x<sub>i</sub>={{resultadoSumatoriov1}}</div>
-        <div>Máximo={{resultadoMaximov1}}</div>
-        <div>Minimo={{resultadoMinimov1}}</div>
+        <div><span>&Sigma;</span>x<sub>i</sub>={{resultadoSumatorio}}</div>
+        <div>Máximo={{resultadoMaximo}}</div>
+        <div>Minimo={{resultadoMinimo}}</div>
       </div>
       <div class="contenedor-resultados">
-        <div><button type="button" (click)="calcularSumatoriov1()"><span>&Sigma;</span></button></div>
-        <div><button type="button" (click)="encontrarMaximov1()">Max</button> </div>
-        <div><button type="button" (click)="encontrarMinimov1()">min</button></div>
-      </div>
-    </div>
-
-
-
-
-
-
-    <div class="box-2">
-
-      <div class="contenedor-veriones">
-        <h2>Introduce un tamaño de la muestra</h2>
-        <div class="contenedor-resultados">
-          <div>
-            <input type="number" [(ngModel)]="tamanoMuestra">
-          </div>
-        </div>
-        <div>
-          <div><button type="button" (click)="generarMuestra()">Generar muestra</button>
-          </div>
-        </div>
-        <div>
-          <h2>Muestra generada</h2>
-          <div class="lista" *ngFor="let numero of muestraGenerada">{{numero}}</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="contenedor-veriones">
-      <div class="contenedor-resultados">
-        <div><span>&Sigma;</span>x<sub>i</sub>={{resultadoSumatoriov2}}</div>
-        <div>Máximo={{resultadoMaximov2}}</div>
-        <div>Minimo={{resultadoMinimov2}}</div>
-      </div>
-      <div class="contenedor-resultados">
-        <div><button type="button" (click)="calcularSumatoriov2()"><span>&Sigma;</span></button></div>
-        <div><button type="button" (click)="encontrarMaximov2()">Max</button> </div>
-        <div><button type="button" (click)="encontrarMinimov2()">min</button></div>
+        <div><button type="button" (click)="calcularSumatorio()"><span>&Sigma;</span></button></div>
+        <div><button type="button" (click)="encontrarMaximo()">Max</button> </div>
+        <div><button type="button" (click)="encontrarMinimo()">min</button></div>
       </div>
     </div>
   </div>
-
 
 </div>

@@ -8,45 +8,25 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'listaNumeros';
 
-  /*propiedades version 1 */
-  numeros: number[] = [];
+  /*propiedades */
+
   nuevoNumero: number = 0;
-  resultadoSumatoriov1: number = 0;
-  resultadoMaximov1: number = 0;
-  resultadoMinimov1: number = 0;
+  resultadoSumatorio: number = 0;
+  resultadoMaximo: number = 0;
+  resultadoMinimo: number = 0;
 
   /*propiedades version 2 */
   tamanoMuestra: number = 0;
-  muestraGenerada: number[] = [];
-  resultadoSumatoriov2: number = 0;
-  resultadoMaximov2: number = 0;
-  resultadoMinimov2: number = 0;
 
-  /*funciones verion 1 */
+  /*array definitivo*/
+  muestra: number[] = [];
+
+  /*funciones para generar muestras */
 
   agregarNumero() {
-    this.numeros.push(this.nuevoNumero);
+    this.muestra.push(this.nuevoNumero);
     this.nuevoNumero = 0;
   }
-  calcularSumatoriov1() {
-    let sumatorio: number = 0;
-    for (let index = 0; index < this.numeros.length; index++) {
-
-      sumatorio += this.numeros[index];
-    }
-    this.resultadoSumatoriov1 = sumatorio;
-  }
-  encontrarMaximov1() {
-    this.resultadoMaximov1 = Math.max(...this.numeros);
-    return this.resultadoMaximov1;
-  }
-  encontrarMinimov1() {
-    this.resultadoMinimov1 = Math.min(...this.numeros);
-    return this.resultadoMinimov1;
-  }
-
-  /*funciones verion 2 */
-
   generarMuestra(): number[] {
     let numeroGenerado: number = 0;
     let maximo: number = 10;
@@ -54,24 +34,27 @@ export class AppComponent {
     for (let i = 0; i < this.tamanoMuestra; i++) {
       numeroGenerado = Math.random() * (maximo - minimo) + minimo;
 
-      this.muestraGenerada.push(numeroGenerado);
+      this.muestra.push(numeroGenerado);
     }
-    return this.muestraGenerada;
+    return this.muestra;
   }
-  calcularSumatoriov2() {
-    let sumatorio: number = 0;
-    for (let index = 0; index < this.muestraGenerada.length; index++) {
 
-      sumatorio += this.muestraGenerada[index];
+  /*funciones para calcular resultados */
+  calcularSumatorio() {
+    let sumatorio: number = 0;
+    for (let index = 0; index < this.muestra.length; index++) {
+
+      sumatorio += this.muestra[index];
     }
-    this.resultadoSumatoriov2 = sumatorio;
+    this.resultadoSumatorio = sumatorio;
   }
-  encontrarMaximov2() {
-    this.resultadoMaximov2 = Math.max(...this.muestraGenerada);
-    return this.resultadoMaximov2;
+  encontrarMaximo() {
+    this.resultadoMaximo = Math.max(...this.muestra);
+    return this.resultadoMaximo;
   }
-  encontrarMinimov2() {
-    this.resultadoMinimov2 = Math.min(...this.muestraGenerada);
-    return this.resultadoMinimov2;
+  encontrarMinimo() {
+    this.resultadoMinimo = Math.min(...this.muestra);
+    return this.resultadoMinimo;
   }
+
 }
