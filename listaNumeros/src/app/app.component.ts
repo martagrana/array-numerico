@@ -49,8 +49,10 @@ export class AppComponent {
 
   generarMuestra(): number[] {
     let numeroGenerado: number = 0;
+    let maximo: number = 10;
+    let minimo: number = 0;
     for (let i = 0; i < this.tamanoMuestra; i++) {
-      numeroGenerado = Math.random();
+      numeroGenerado = Math.random() * (maximo - minimo) + minimo;
 
       this.muestraGenerada.push(numeroGenerado);
     }
@@ -58,7 +60,7 @@ export class AppComponent {
   }
   calcularSumatoriov2() {
     let sumatorio: number = 0;
-    for (let index = 0; index < this.numeros.length; index++) {
+    for (let index = 0; index < this.muestraGenerada.length; index++) {
 
       sumatorio += this.muestraGenerada[index];
     }
