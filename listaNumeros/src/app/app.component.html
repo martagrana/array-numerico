@@ -2,7 +2,6 @@
 
 <div class="contenedor">
 
-
   <div class="box-2">
     <div class="contenedor-veriones">
       <h2>Introduce un número</h2>
@@ -27,9 +26,9 @@
       </div>
       <div>
         <h2>Muestra de números</h2>
-
         <div class="lista" *ngFor="let numero of muestra">{{numero}}</div>
       </div>
+      <div><button type="button" (click)="resetear()">Resetear muestra</button></div>
     </div>
 
     <div class="contenedor-veriones">

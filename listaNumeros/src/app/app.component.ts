@@ -33,10 +33,15 @@ export class AppComponent {
     let minimo: number = 0;
     for (let i = 0; i < this.tamanoMuestra; i++) {
       numeroGenerado = Math.random() * (maximo - minimo) + minimo;
-
+      numeroGenerado = Number(numeroGenerado.toFixed(2));
       this.muestra.push(numeroGenerado);
     }
     return this.muestra;
+  }
+
+  /*función para resetear la muestra*/
+  resetear() {
+    this.muestra = [];
   }
 
   /*funciones para calcular resultados */
